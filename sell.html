@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зар оруулах — AutoMart</title>
+  <meta name="description" content="AutoMart дээр машинаа зарахын тулд зарын маягтыг бөглөнө үү.">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/m4.css">
+</head>
+<body>
+ 
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Auto<span>Mart</span></a>
+      <nav class="main-nav" aria-label="Үндсэн цэс">
+        <a href="index.html">Нүүр</a>
+        <a href="cars.html">Машинууд</a>
+        <a class="active" href="sell.html">Зар оруулах</a>
+        <a href="compare.html">Харьцуулах</a>
+        <a href="profile.html">Миний зар</a>
+      </nav>
+      <div class="auth-links">
+        <a class="btn btn-outline" href="login.html">Нэвтрэх</a>
+        <a class="btn" href="register.html">Бүртгүүлэх</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>Машинаа зарах</h1>
+        <p>Доорх маягтыг бөглөж машиныхаа мэдээллийг оруулна уу. Мэдээлэл үнэн зөв, дэлгэрэнгүй байх тусам худалдан авагч хурдан холбогдоно.</p>
+      </div>
+    </section>
+
+    <div class="container section">
+      <form class="card form-card form" action="#" method="post">
+
+        <fieldset>
+          <legend>1. Машины мэдээлэл</legend>
+          <div class="row">
+            <div class="field">
+              <label for="make">Марк</label>
+              <select id="make" name="make" required>
+                <option value="">Сонгоно уу</option>
+                <option>Toyota</option>
+                <option>Lexus</option>
+                <option>Hyundai</option>
+                <option>Kia</option>
+                <option>Nissan</option>
+                <option>Honda</option>
+                <option>Mitsubishi</option>
+                <option>Subaru</option>
+                <option>Ford</option>
+                <option>Бусад</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="model">Загвар</label>
+              <input id="model" name="model" type="text" placeholder="Жишээ: Prius 20" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="year">Үйлдвэрлэсэн он</label>
+              <input id="year" name="year" type="number" min="1990" max="2026" placeholder="2012" required>
+            </div>
+            <div class="field">
+              <label for="color">Өнгө</label>
+              <select id="color" name="color" required>
+                <option value="">Сонгоно уу</option>
+                <option>Цагаан</option>
+                <option>Хар</option>
+                <option>Мөнгөлөг</option>
+                <option>Саарал</option>
+                <option>Цэнхэр</option>
+                <option>Улаан</option>
+                <option>Хүрэн</option>
+                <option>Бусад</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Техникийн мэдээлэл</legend>
+          <div class="row">
+            <div class="field">
+              <label for="engine-size">Хөдөлгүүрийн багтаамж (литр)</label>
+              <input id="engine-size" name="engine_size" type="number" min="0.6" max="8" step="0.1" placeholder="1.8" required>
+            </div>
+            <div class="field">
+              <label for="engine-type">Хөдөлгүүрийн төрөл</label>
+              <select id="engine-type" name="engine_type" required>
+                <option value="">Сонгоно уу</option>
+                <option>Бензин</option>
+                <option>Дизель</option>
+                <option>Гибрид</option>
+                <option>Цахилгаан</option>
+                <option>Бензин + хий</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="mileage">Гүйлт (км)</label>
+            <input id="mileage" name="mileage" type="number" min="0" step="1000" placeholder="145000" required>
+          </div>
+          <div class="field" role="radiogroup" aria-labelledby="transmission-label">
+            <span id="transmission-label"><strong>Дамжуулга</strong></span>
+            <div class="choice-group">
+              <label class="choice" for="tr-auto"><input id="tr-auto" name="transmission" type="radio" value="auto" required> Автомат</label>
+              <label class="choice" for="tr-manual"><input id="tr-manual" name="transmission" type="radio" value="manual"> Механик</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Үнэ, зураг, тайлбар</legend>
+          <div class="field">
+            <label for="price">Үнэ (₮)</label>
+            <input id="price" name="price" type="number" min="0" step="100000" placeholder="24500000" required>
+            <p class="hint">Зах зээлийн үнийг харьцуулж, бодитой үнэ бичнэ үү.</p>
+          </div>
+          <div class="field">
+            <label for="photos">Зураг оруулах</label>
+            <input id="photos" name="photos" type="file" accept="image/*" multiple>
+            <p class="hint">Урд, хойд, хажуу, дотор, хөдөлгүүрийн хэсгийн зураг оруулбал илүү үр дүнтэй.</p>
+          </div>
+          <div class="field">
+            <label for="description">Нэмэлт тайлбар</label>
+            <textarea id="description" name="description" maxlength="800" placeholder="Машины байдал, засвар, солигдсон сэлбэг, хэлэлцээрийн нөхцөл гэх мэт"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Борлуулагчийн мэдээлэл</legend>
+          <div class="row">
+            <div class="field">
+              <label for="seller-name">Нэр</label>
+              <input id="seller-name" name="seller_name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="seller-phone">Утасны дугаар</label>
+              <input id="seller-phone" name="seller_phone" type="tel" autocomplete="tel" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" placeholder="99112233" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="location">Байршил</label>
+            <select id="location" name="location" required>
+              <option value="">Сонгоно уу</option>
+              <option>Улаанбаатар — Баянзүрх</option>
+              <option>Улаанбаатар — Сүхбаатар</option>
+              <option>Улаанбаатар — Чингэлтэй</option>
+              <option>Улаанбаатар — Баянгол</option>
+              <option>Улаанбаатар — Хан-Уул</option>
+              <option>Улаанбаатар — Сонгинохайрхан</option>
+              <option>Улаанбаатар — Налайх</option>
+              <option>Улаанбаатар — Багануур</option>
+              <option>Орон нутаг</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Зар оруулах</button>
+          <p class="note">Загвар хувилбар — мэдээлэл хадгалахгүй.</p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>AutoMart</strong>
+        <p>Хуучин болон шинэ автомашин зарах, худалдан авах вэб сайт.</p>
+      </div>
+      <nav class="footer-links" aria-label="Хөл хэсгийн цэс">
+        <a href="index.html">Нүүр</a>
+        <a href="cars.html">Машинууд</a>
+        <a href="sell.html">Зар оруулах</a>
+        <a href="compare.html">Харьцуулах</a>
+        <a href="blog.html">Блог</a>
+        <a href="guide.html">Худалдан авагчийн заавар</a>
+        <a href="faq.html">Тусламж / FAQ</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">Оюутны багийн сургалтын төсөл</div>
+  </footer>
+</body>
+</html>
